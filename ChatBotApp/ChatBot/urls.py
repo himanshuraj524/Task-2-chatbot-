@@ -15,8 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from ChatBot import views
+from ChatBot import views #importing views from the chatbot
 
 urlpatterns = [
-    path('', views.home, name='home'),
+    path('', views.home, name='home'),#this is the home page of the chatbotApp.
+    path('get-response/', views.Response, name='response'),#this is the home page of the chatbotApp.
 ]

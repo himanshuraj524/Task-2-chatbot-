@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Below is the stylesheet -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'CSS/Appstyle.css' %}">
+    <!-- below is frontend js (always add this js after the server js.) -->
+    {% load static %}
+    <script defer src="{% static 'JS/response.js' %}"></script>
+    <title>ChatBot</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="heading">
+            <!-- <img src="/speech-bubbles.png" alt="Image"> -->
+            ChatBot
+        </h1>
+        <div class="msgcontainer" id="scrollmsg">
+            <!-- <div class="left message">sender:hiii....</div>
+            <div class="right message">me:hiii....</div> -->
+        </div>
+    </div>
+    <div class="send">
+          {% csrf_token %}
+            <input type="text" name="messageInp" id="messageInp">
+            <button class="btn" id="SendButton" type="submit">Send</button>
+    </div>
+</body>
+</html>

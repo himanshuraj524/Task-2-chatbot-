@@ -1,0 +1,166 @@
+/*CSS reset*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*Font import*/
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Maven+Pro&display=swap');
+
+/*styling the body*/
+body{
+    
+    background-color: #2d4059;
+    scroll-behavior: smooth;
+}
+
+/*Styling the Container*/
+.container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 15px auto;
+    margin-bottom: 2px;
+    background-color: #ea5455;
+    border-radius: 12px;
+    box-shadow: 0px 1px 5px 1px #4c6996;
+    height: 90vh;
+    width: 60vw;
+
+}
+
+/*Styling title*/
+.heading{
+    margin-top: 10px;
+    font-size: 28px;
+    font-family: 'Lobster', cursive;
+    color: #fcf1f1;
+    text-shadow: 0px 3px 4px #2d4059;
+}
+
+/*Styling logo image*/
+.heading>img{
+    display: flex;
+    margin: 0px auto;
+    margin-bottom: 2px;
+    height: 70px;
+    width: 70px;
+}
+
+/*Styling messages*/
+.msgcontainer{
+    margin: 30px 20px;
+    padding:15px 20px;
+    overflow-y: auto;
+    height: 350px;
+}
+
+/*Designing the scroll bar*/
+/*width*/
+.msgcontainer::-webkit-scrollbar{
+    width: 8px;
+}
+/*handle*/
+.msgcontainer::-webkit-scrollbar-thumb{
+    background-color: #f1a5a6;
+    border-radius: 5px;
+}
+/*handle on hover*/
+.msgcontainer::-webkit-scrollbar-thumb:hover{
+    background-color: #2d4059;
+}
+/**/
+.message{
+    font-size: 18px;
+    padding: 6px;
+    font-family: 'Maven Pro', sans-serif;
+    background-color: #393e46;
+    border-radius: 10px;
+    color: #eeeeee;
+    border: none;
+    animation-name: message;
+    animation-duration: .20s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes message{
+    from{
+        font-size: 0px;
+    }
+    to{
+        font-size: 18px;
+    }
+}
+
+.left{
+    float: left;
+    margin: 10px 20px;
+    clear: both;
+    border-top-left-radius: 0px;
+}
+
+.right{
+    float: right;
+    clear: both;
+    margin: 10px 20px;
+    border-top-right-radius: 0px;
+
+}
+
+
+
+/*Styling the form*/
+
+.send{
+    display: flex;
+    margin: 4px auto;
+    align-items: center;
+    justify-content: center;
+}
+#send-container{
+    flex-direction: row;
+
+}
+input{
+    outline: none;
+    width: 33vw;
+    border: none;
+    border-radius: 10px;
+    padding: 7px 10px;
+    background-color: #d8d3cd;
+    color: #252a34;
+    font-size: 18px;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+input:focus-visible{
+    box-shadow: 0px 0px 1px 1px #eaeaea;
+}
+
+.btn{
+    padding: 6px 14px;
+    margin-left: 3px;
+    font-size: 18px;
+    font-family: 'Maven Pro', sans-serif;
+    border-radius: 11px;
+    border: none;
+    border-bottom: 2px solid #eaeaea;
+    outline: none;
+    color: #ea5455;
+    background-color: #eaeaea;
+
+}
+
+.btn:hover{
+    color: #f6f6f6;
+    background-color: #ea5455;   
+    transition: all .3s;
+}
+
+.btn:active{
+    padding: 4px 12px;
+    font-size: 17px;
+    transition: all .1ms;
+
+}
