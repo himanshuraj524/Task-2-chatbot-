@@ -18,5 +18,5 @@ from django.urls import path,include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('ChatBot.urls')),#the end point will redirect to the chabot end points file.
+    path('', include('ChatBot.urls')),#the end point will redirect to the chabot end point file urls.py .
 ]

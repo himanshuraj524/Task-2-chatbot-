@@ -19,5 +19,5 @@ from ChatBot import views #importing views from the chatbot
 
 urlpatterns = [
     path('', views.home, name='home'),#this is the home page of the chatbotApp.
-    path('get-response/', views.Response, name='response'),#this is the home page of the chatbotApp.
+    path('get-response/', views.Response, name='response'),#this is the API for the Chatbot app from this the Javascript will make the Fetch API request.
 ]
